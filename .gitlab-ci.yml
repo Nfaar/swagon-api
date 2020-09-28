@@ -1,0 +1,18 @@
+image: maven:3-jdk-11
+
+stages:
+    - build
+    - test
+
+build :
+    stage: build
+    script:
+        - ./mvnw clean install
+        - ./mvnw compiler:compiler
+        - echo "Built successfuly"
+
+test:
+    stage: test
+    script: 
+        - ./mvnw test
+        - echo "successful"
