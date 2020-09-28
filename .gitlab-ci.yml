@@ -8,7 +8,7 @@ build :
     stage: build
     script:
         - ./mvnw clean install
-        - ./mvnw compiler:compiler
+        - ./mvnw compiler:compile
         - echo "Built successfuly"
 
 test:
