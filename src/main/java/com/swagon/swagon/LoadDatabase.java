@@ -1,4 +1,4 @@
-package com.swagon.swagon;
+/*package com.swagon.swagon;
 
 
 import org.slf4j.Logger;
@@ -16,11 +16,11 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(RenterRepository repository){
         return args -> {
-            log.info("Preloading " + repository.save(new Renter("StevenGeq", "steven@gmail.com")));
-            log.info("Preloading " + repository.save(new Renter("GekaPedal", "pedal@gmail.com")));
-            log.info("Preloading " + repository.save(new Renter("ToshoKukata", "tosho@gmail.com")));
-            log.info("Preloading " + repository.save(new Renter("Viktor Naydenov", "exampleASD@gmail.com")));
-            log.info("Preloading " + repository.save(new Renter("Gosho Petkov", "exampleASD@gmail.com")));
+            log.info("Preloading " + repository.save(new Renter("Steven","Geq", "steven@gmail.com")));
+            log.info("Preloading " + repository.save(new Renter("Geka","Pedal", "pedal@gmail.com")));
+            log.info("Preloading " + repository.save(new Renter("Tosho","Kukata", "tosho@gmail.com")));
+            log.info("Preloading " + repository.save(new Renter("Viktor","Naydenov", "exampleASD@gmail.com")));
+            log.info("Preloading " + repository.save(new Renter("Gosho","Petkov", "exampleASD@gmail.com")));
         };
     }
-}
+}*/
