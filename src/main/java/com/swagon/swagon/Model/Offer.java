@@ -24,12 +24,12 @@ public class Offer {
 		
 	}
 	
-	public Offer(String model, int yearOfConstruction) {
+	public Offer(int carOwnerId, String make, String model, int mileage, int yearOfConstruction) {
 		this.id = counter;
-		this.carOwnerId = 1;
+		this.carOwnerId = carOwnerId;
+		this.make = make;
 		this.model = model;
-		this.make = null;
-		this.mileage = 0;
+		this.mileage = mileage;
 		this.archieved = false;
 		this.yearOfConstruction = yearOfConstruction;
 		
@@ -37,7 +37,6 @@ public class Offer {
 		
 		Offer.counter++;
 	}
-
 
 
 	public int getId() {

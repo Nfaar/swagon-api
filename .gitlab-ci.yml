@@ -3,6 +3,7 @@ image: maven:3-jdk-11
 stages:
     - build
     - test
+    - sonar
 
 build :
     stage: build
@@ -16,3 +17,8 @@ test:
     script: 
         - ./mvnw test
         - echo "successful"
+
+sonar:
+    stage: sonar
+    script: 
+        - ./mvnw sonar:sonar -Dsonar.projectKey=swagon-api -Dsonar.host.url=http://localhost:9000 -Dsonar.login=b291d76d4afa705b38b6744956bb04b9538bf13d
