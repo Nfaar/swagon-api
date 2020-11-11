@@ -22,5 +22,5 @@ sonar:
     stage: sonar
     script: 
         - ./mvnw sonar:sonar -Dsonar.projectKey=swagon-api
-        - ./mvnw sonar:sonar -Dsonar.host.url=http://localhost:9000
-        - ./mvnw sonar:sonar -Dsonar.login=b291d76d4afa705b38b6744956bb04b9538bf13d
+        - ./mvnw sonar:-Dsonar.host.url=http://localhost:9000
+        - ./mvnw sonar:-Dsonar.login=b291d76d4afa705b38b6744956bb04b9538bf13d
