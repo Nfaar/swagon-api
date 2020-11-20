@@ -43,13 +43,14 @@ public class OfferController {
 		Offer test = repository.save(newOffer);
 		return test;
 	}
-
+	@CrossOrigin
 	@DeleteMapping("/offers/{id}")
 	void deleteOffer(@PathVariable int id) {
 		repository.deleteById(id);
 
 	}
-
+	
+	@CrossOrigin
 	@PutMapping("offers/{id}")
 	Offer updateOffer(@RequestBody Offer newOffer, @PathVariable Integer id) {
 		return repository.findById(id).map(Offer -> {
