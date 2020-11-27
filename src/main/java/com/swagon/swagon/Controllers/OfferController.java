@@ -2,9 +2,9 @@ package com.swagon.swagon.Controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.swagon.swagon.OfferRepository;
 import com.swagon.swagon.Model.Offer;
 import com.swagon.swagon.Model.Renter;
+import com.swagon.swagon.repository.OfferRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +31,8 @@ public class OfferController {
 	List<Offer> all() {
 		return repository.findAll();
 	}
-
+	
+	@CrossOrigin
 	@GetMapping("/offers/{id}")
 	Optional<Offer> one(@PathVariable int id) {
 		return repository.findById(id);
@@ -43,13 +44,15 @@ public class OfferController {
 		Offer test = repository.save(newOffer);
 		return test;
 	}
-
+	
+	@CrossOrigin
 	@DeleteMapping("/offers/{id}")
 	void deleteOffer(@PathVariable int id) {
 		repository.deleteById(id);
 
 	}
-
+	
+	@CrossOrigin
 	@PutMapping("offers/{id}")
 	Offer updateOffer(@RequestBody Offer newOffer, @PathVariable Integer id) {
 		return repository.findById(id).map(Offer -> {

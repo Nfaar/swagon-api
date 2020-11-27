@@ -1,4 +1,4 @@
-package com.swagon.swagon;
+package com.swagon.swagon.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -2,8 +2,8 @@ package com.swagon.swagon.Controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import com.swagon.swagon.RenterRepository;
 import com.swagon.swagon.Model.Renter;
+import com.swagon.swagon.repository.RenterRepository;
 
 import java.util.List;
 import java.util.Optional;
