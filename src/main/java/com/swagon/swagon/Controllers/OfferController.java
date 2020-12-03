@@ -26,34 +26,34 @@ public class OfferController {
 		this.repository = repository;
 	}
 
-	@GetMapping("/offers")
+	@GetMapping("/api/public/offers")
 	@CrossOrigin
 	List<Offer> all() {
 		return repository.findAll();
 	}
 	
 	@CrossOrigin
-	@GetMapping("/offers/{id}")
+	@GetMapping("/api/public/offers/{id}")
 	Optional<Offer> one(@PathVariable int id) {
 		return repository.findById(id);
 	}
 
 	@CrossOrigin
-	@PostMapping("/offers")
+	@PostMapping("/api/public/offers")
 	Offer newOffer(@RequestBody Offer newOffer) {
 		Offer test = repository.save(newOffer);
 		return test;
 	}
 	
 	@CrossOrigin
-	@DeleteMapping("/offers/{id}")
+	@DeleteMapping("/api/public/offers/{id}")
 	void deleteOffer(@PathVariable int id) {
 		repository.deleteById(id);
 
 	}
 	
 	@CrossOrigin
-	@PutMapping("offers/{id}")
+	@PutMapping("/api/public/offers/{id}")
 	Offer updateOffer(@RequestBody Offer newOffer, @PathVariable Integer id) {
 		return repository.findById(id).map(Offer -> {
 			Offer.setCarOwnerId(id);
